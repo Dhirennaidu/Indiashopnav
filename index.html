@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500;600;700&family=Heebo:wght@700&family=Oswald:wght@700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <title>header</title>
+</head>
+<style>
+  body{
+    margin: 0px;
+  }
+  .header{
+    width:100%;
+    height:100px;
+    background-color: whitesmoke;
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+  
+  }
+  .brand{
+    width:300px;
+    height:60px;
+    border:1px soid gray;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size:30px;
+  }
+  .searching{
+     width:400px;
+     height:60px;
+     border:1px solid gray;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     margin-top:20px;
+
+  }
+  .searching input{
+    width:350px;
+    height:40px;
+    margin-top: 10px;
+  }
+  .location{
+    width:200px;
+    height:60px;
+    
+    margin-top:20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+  }
+  .location input
+  {
+    width:200px;
+    height:60px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius:10px ;
+  }
+  .icons-bar
+  {
+    width:300px;
+    height:60px;
+    border:1px solid gray;
+    margin-top:20px;
+    justify-content:right;
+    align-items:center;
+    text-align: right;
+    margin-top: 20px;
+    display: flex;
+  }
+  .icons-bar span{
+    font-size:30px;
+    margin-left:10px;
+  }
+  .modall{
+    visibility:hidden;
+  }
+  .search{
+    visibility:hidden;
+  }
+  @media only screen and (max-width: 1200px) {
+
+     .dd{
+      width:10px;
+     }
+     .header{
+      width:100%;
+      height:100px;
+      justify-content: space-between;
+     }
+      .searching{
+        display: none;
+      }
+      .icons-bar{
+        width:300px;
+        justify-content:center;
+        align-items: center;
+        margin-left: 0px;
+      }
+      .icons-bar span{float: right;
+        font-size:20px;
+        justify-content: right;
+        text-align: right;
+        padding-left: -10px;
+      }
+      .location{
+        display: none;
+      }
+      .brand p{
+        font-size:25px;
+      }
+      .modall button{
+        visibility:visible;
+      }
+      .search button{
+        visibility: visible;
+      }
+  }
+</style>
+<body>
+ <header class="header">
+  <div class="brand">
+    <p>INDIA<i class="bi bi-cart4"></i><br>shop</p>
+  </div>
+  <div class="location">
+    <input type="button" value="location">
+  </div>
+  <div class="searching">
+   <input type="search" placeholder="Search Product"/>
+  </div>
+  <div class="icons-bar">
+    <span class="search">
+      <button type="button" class="btn btn-primary position-relative" data-toggle="modal" data-target="#exampleModalScrollable" >
+        <i class="bi bi-search"></i>
+      
+      </button>
+    </span>
+    <span>
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-mdb-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-person-check-fill"></i>
+        </button>
+       
+      </div>
+
+    </span>
+    <span>
+      <button type="button" class="btn btn-primary position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling1" aria-controls="offcanvasScrolling">
+        <i class="bi bi-heart"></i>
+        <div class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-danger">
+          0
+          <span class="visually-hidden">unread messages</span>
+        </div>
+      </button>
+    </span>
+    <span>
+
+      <button type="button" class="btn btn-primary position-relative">
+        <i class="bi bi-bag"></i>
+        <div class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-danger">
+          0
+          <span class="visually-hidden">unread messages</span>
+        </div>
+      </button>
+    
+    </span>
+    <span class="modall">
+
+      <button type="button" class="btn btn-primary position-relative" >
+        <i class="bi bi-list"></i>
+       
+      </button>
+    
+    </span>
+  </div>
+  
+ 
+
+</header>
+<nav>
+
+</nav> 
+
+
+<!-- Button trigger modal -->
+<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle"> <p>INDIA<i class="bi bi-cart4"></i><br>shop</p></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Search Product">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    
+
+
+</body>
+
+</html>
