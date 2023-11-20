@@ -13,230 +13,469 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500;600;700&family=Heebo:wght@700&family=Oswald:wght@700&family=Poppins:wght@700&display=swap" rel="stylesheet">
-    <title>header</title>
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500;600;700&family=Heebo:wght@700&family=Oswald:wght@700&family=Poppins:wght@700&display=swap" rel="stylesheet">  
 </head>
-<style>
-  body{
-    margin: 0px;
-  }
-  .header{
-    width:100%;
-    height:100px;
-    background-color: whitesmoke;
-    border-bottom: 1px solid gray;
-    display: flex;
-    justify-content: space-around;
-    text-align: left;
-  
-  }
-  .brand{
-    width:300px;
-    height:60px;
-    border:1px soid gray;
-    justify-content: center;
-    align-items: center;
+    <style>
+        body
+        {
+            margin: 0;
+        }
+        #containerSlider
+        {
+            margin: auto;
+            width: 90%;
+            text-align: center;
+            padding-top: 100px;
+            box-sizing: border-box;
+        }
+        #containerSlider img
+        {
+            width: 100%;
+            height: 140%;
+            text-align: center;
+            align-content: center;
+        }
+        @media(max-width: 732px)
+        {
+            #containerSlider img
+            {
+                height: 12em;
+            }
+        }
+        @media(max-width: 500px)
+        {
+            #containerSlider img
+            {
+                height: 10em;
+            }
+        }
+        body
+{
+    margin: 0;
+}
+#badge
+{
+    position: absolute;
+    background-color: rgb(255, 30, 30);
+    color: white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 14px;
+    top: 10px;
+    right:158px;
+}
+#container
+{
+    background-color: white;
+    margin: auto;
     text-align: center;
-    font-size:30px;
-  }
-  .searching{
-     width:400px;
-     height:60px;
-     border:1px solid gray;
-     justify-content: center;
-     align-items: center;
-     text-align: center;
-     margin-top:20px;
-
-  }
-  .searching input{
-    width:350px;
-    height:40px;
-    margin-top: 10px;
-  }
-  .location{
-    width:200px;
-    height:60px;
-    
-    margin-top:20px;
-    justify-content: center;
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1.5fr 1.5fr 5fr 1fr;
+    font-family: 'Lato', sans-serif;
+    z-index: 1;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
+    padding: 15px 40px;
+    box-sizing: border-box;
+    position: fixed;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 2px 6px 2px rgba(60, 64, 67, 0.149); 
+}
+#shopName 
+{
+    font-size: 40px; 
+    font-family: 'Lato', sans-serif;
+}
+#shopName a
+{
+    text-decoration: none;
+    color: rgb(29, 29, 29);
+}
+#shopName > b
+{
+    font-weight: 900;
+    font: black;
+}
 
-  }
-  .location input
-  {
-    width:200px;
-    height:60px;
-    border-top-left-radius: 10px;
-    border-bottom-right-radius:10px ;
-  }
-  .icons-bar
-  {
-    width:300px;
-    height:60px;
-    border:1px solid gray;
-    margin-top:20px;
-    justify-content:right;
-    align-items:center;
-    text-align: right;
-    margin-top: 20px;
+#collection
+{
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#collection a
+{
+    text-decoration: none;
+    color: rgb(29, 29, 29);
+}
+
+.search
+{
+    padding: 14px;
+    /* color: gray; */
+    color: rgb(29, 29, 29);
+    min-width: 25px;
+    text-align: center;
+    position: absolute;
+}
+
+.addedToCart
+{
+    font-size: 1.5em;
+    margin-right: 25px;
+}
+#user
+{   font-size:18px;
     display: flex;
-  }
-  .icons-bar span{
-    font-size:30px;
+    /* float: right; */
+    align-items: center;
+}
+
+.userIcon
+{
+    font-size: 45px;
+}
+#input 
+{
+    width: 35em;
+    height: 3em;
+    padding: 2px 50px;
+    background-color: rgb(241, 241, 241);
+    border: none;
+    border-radius: 5px;
+}
+#input::placeholder
+{
+    font-weight: bold;
+}
+#input:focus
+{
+    outline: none;
+}
+#user{
+    width:250px;
+    background-color: rgb(255, 255, 255);
+}
+#user a
+{  
+    color: rgb(29, 29, 29)
+}
+#user button{
     margin-left:10px;
-  }
-  .modall{
-    visibility:hidden;
-  }
-  .search{
-    visibility:hidden;
-  }
-  @media only screen and (max-width: 1200px) {
+}
+#button
+{
+  background-color: white;
+  border:1px solid gray;
+}
+#list{
+    visibility: hidden;
+}
+#search1{
+    visibility: hidden;
+}
+/* ----------------------------- MEDIA QUERY --------------------------- */
 
-     .dd{
-      width:10px;
-     }
-     .header{
-      width:100%;
-      height:100px;
-      justify-content: space-between;
-     }
-      .searching{
+@media(max-width: 1300px)
+{
+    #collection
+    {
+        font-size: 13px;
+    }
+    #button 
+    {
+        width: 100px;
+        background-color: white;
+        border:1px solid gray;
+    }
+}
+@media(max-width: 1212px)
+{
+    #collection
+    {
+        font-size: 13px;
+    }
+    #input 
+    {
+        width: 20em;
+    }
+    .addedToCart
+    {
+        font-size: 1.5em;
+        margin: 10px 20px;
+    }
+}
+
+@media(max-width: 1090px)
+{
+    #container
+    {
+        display: grid;
+        grid-template-columns: 1fr 2fr 0.5fr;
+    }
+    #search
+    {
         display: none;
-      }
-      .icons-bar{
-        width:300px;
-        justify-content:center;
-        align-items: center;
-        margin-left: 0px;
-      }
-      .icons-bar span{float: right;
-        font-size:20px;
-        justify-content: right;
-        text-align: right;
-        padding-left: -10px;
-      }
-      .location{
-        display: none;
-      }
-      .brand p{
-        font-size:25px;
-      }
-      .modall button{
-        visibility:visible;
-      }
-      .search button{
+    }
+}
+@media(max-width: 750px)
+{
+    #shopName
+    {
+        font-size: 18px;
+    }
+    #collection
+    {
+        font-size: 12px;
+    }
+    .userIcon
+    {
+        font-size: 35px;
+    }
+    .addedToCart
+    {
+        font-size: 1.2em;
+        margin: 10px 20px;
+    }
+}
+
+@media(max-width: 650px)
+{
+    #shopName
+    {
+        font-size: 18px;
+    }
+    #collection
+    {
+        font-size: 10px;
+    }
+    .userIcon
+    {
+        font-size: 30px;
+    }
+}
+@media(max-width: 550px)
+{
+    #container 
+    {
+        padding: 20px 25px;
+    }
+}
+
+/* badge media */
+
+@media(max-width: 1480px)
+{
+    #badge
+    {
+        right:150px;
+    }
+}
+@media(max-width: 1426px)
+{
+    #badge
+    {
+        right:142px;
+    }
+}
+@media(max-width: 1360px)
+{
+    #badge
+    {
+        right:136px;
+    }
+}
+@media(max-width: 1320px)
+{
+    #badge
+    {
+        right:130px;
+    }
+}
+@media(max-width: 1259px)
+{
+    #badge
+    {
+        right:100px;
+    }
+}
+@media(max-width: 1212px)
+{
+    #badge
+    {
+        right: 100px;
+    }
+}
+@media(max-width: 1155px)
+{
+    #badge
+    {
+        right: 100px;
+    }
+}
+@media(max-width: 1090px)
+{
+    #badge
+    {
+        right: 100px;
+    }
+}
+@media(max-width: 1030px)
+{
+    #badge
+    {
+        right: 100px;
+    }
+}
+@media(max-width: 970px)
+{
+    #badge
+    {
+        right: 100px;
+    }
+}
+@media(max-width: 910px)
+{
+    #badge
+    {
+        right: 100px;
+    }
+}
+@media(max-width: 850px)
+{
+    #badge
+    {
+        right: 87px;
+    }
+}
+@media(max-width: 750px)
+{
+    #badge
+    {
+        right: 87px;
+        padding: 3px 6px;
+        font-size: 12px;
+        top: 12px;
+    }
+}
+@media(max-width: 650px)
+{
+    #badge
+    {
+        right: 78px;
+    }
+}
+@media(max-width: 550px)
+{
+    #badge
+    {
+        right: 62px;
+        top: 18px;
+    }
+    #shopName{
+        width:30px;
+    }
+    #user{
+        width:450px;
+    }
+    #user button{margin-left:10px;
+        float:left;
+    }
+    #list{
         visibility: visible;
-      }
-  }
-</style>
+    }
+    #search1{
+        visibility: visible;
+    }
+    #collection{
+        visibility: hidden;
+    }
+}
+    </style>
+
+</head>
 <body>
- <header class="header">
-  <div class="brand">
-    <p>INDIA<i class="bi bi-cart4"></i><br>shop</p>
-  </div>
-  <div class="location">
-    <input type="button" value="location">
-  </div>
-  <div class="searching">
-   <input type="search" placeholder="Search Product"/>
-  </div>
-  <div class="icons-bar">
-    <span class="search">
-      <button type="button" class="btn btn-primary position-relative" data-toggle="modal" data-target="#exampleModalScrollable" >
-        <i class="bi bi-search"></i>
-      
-      </button>
-    </span>
-    <span>
+    <header>
+        <section>
+            <!-- MAIN CONTAINER -->
+            <div id="container">
+                <!-- SHOP NAME -->
+                <div id="shopName"><a href="index.html"> <b>INDIA</b>SHOP </a></div>
+                    <!-- COLLCETIONS ON WEBSITE -->
+                   
+                    <!-- SEARCH SECTION -->
+                    <div id="search">
+                        <i class="fas fa-search search"></i>
+                        <input type="search" id="input" name="searchBox" placeholder="Search Product">
+                    </div>
+                    <!-- USER SECTION (CART AND USER ICON) -->
+                    <div id="collection">
+                        <div id="clothing">
+                            <button type="button" id="button"><i class="bi bi-geo-alt-fill"></i>Location</button>
+                        </div>
+                        
+                    </div>
+                    <div id="user">
+                        <button type="button" class="btn btn-primary position-relative" id="search1" data-toggle="modal" data-target="#exampleModalLong">
+                            
+                        <i class="bi bi-search"></i>
+    
+                          </button>
+                          <button type="button" class="btn btn-primary position-relative">
+                            
+                            <i class="bi bi-person"></i>
+        
+                              </button>
+                        <button type="button" class="btn btn-primary position-relative" >
+                            <i class="bi bi-cart"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-danger">
+                              10
+                              <span class="visually-hidden">unread messages</span>
+                            </span>
+                          </button>
+                          <button type="button" class="btn btn-primary position-relative" id="list" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            
+                            <i class="bi bi-list"></i>
+        
+                              </button>
+                    </div>
+                   
+            </div>
 
-      <div class="btn-group">
-        <button type="button" class="btn btn-primary dropdown-toggle" data-mdb-toggle="dropdown" aria-expanded="false">
-          <i class="bi bi-person-check-fill"></i>
-        </button>
+            
+        </section>
        
+
+    </header>
+    
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+          </div>
+        </div>
       </div>
-
-    </span>
-    <span>
-      <button type="button" class="btn btn-primary position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling1" aria-controls="offcanvasScrolling">
-        <i class="bi bi-heart"></i>
-        <div class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-danger">
-          0
-          <span class="visually-hidden">unread messages</span>
-        </div>
-      </button>
-    </span>
-    <span>
-
-      <button type="button" class="btn btn-primary position-relative">
-        <i class="bi bi-bag"></i>
-        <div class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-danger">
-          0
-          <span class="visually-hidden">unread messages</span>
-        </div>
-      </button>
-    
-    </span>
-    <span class="modall">
-
-      <button type="button" class="btn btn-primary position-relative" >
-        <i class="bi bi-list"></i>
-       
-      </button>
-    
-    </span>
-  </div>
   
- 
-
-</header>
-<nav>
-
-</nav> 
-
-
-<!-- Button trigger modal -->
-<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalScrollableTitle"> <p>INDIA<i class="bi bi-cart4"></i><br>shop</p></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Search Product">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal -->
-
-
-
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-    
-
-
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  
+      
+      
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+      
+  
 </body>
-
 </html>
